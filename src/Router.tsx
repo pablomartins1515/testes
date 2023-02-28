@@ -7,11 +7,10 @@ import { Blog } from "./pages/Blog";
 export function Router() {
     return (
             <Routes>
-                <Route path="/" element={<Event />} />
-                <Route path="/politica/" element={<Politica />} /> 
-                <Route path="/ComoFunciona/" element={<ComoFunciona />} />                 
-                <Route path="/Blog/" element={<Blog />} />           
-          
+                    <Route path="/" element={<Event />} />
+                    <Route path="/politica/" element={<Politica />} /> 
+                    <Route path="/ComoFunciona/" element={<ComoFunciona />} />                 
+                    <Route path="/Blog/" element={<Blog />} />           
             </Routes>
     )
 }
