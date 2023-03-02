@@ -13,15 +13,7 @@ export function Header () {
                 
             </div>
             
-            <div className=" px-4 py-3 row-start-1 row-span-1 itens-center ">
-                <a href="/ComoFunciona">
-                    <div className=" text-gray-600 font-semibold w-full flex items-center justify-center  boder-b boder-gray-60 hover:text-blue-900 hover:underline">
-                    Como Funciona 
-                    </div>
-                </a>                
-                <link />
-            </div>
-
+            
             <div className=" px-4 py-3 row-start-1 row-span-1 itens-center ">
                 <a href="/Blog">
                     <div className=" text-gray-600 font-semibold w-full flex items-center justify-center  boder-b boder-gray-60 hover:text-blue-900 hover:underline">

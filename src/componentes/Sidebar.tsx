@@ -1,7 +1,39 @@
-export function Sidebar () {
+import { gql, useQuery } from "@apollo/client";
+import { useGetLessonsQuery } from "../graphql/generated";
+import { Lesson } from "./Lesson";
+
+import { useEffect } from "react";
+
+
+
+export function Sidebar() {
+    const { data } = useGetLessonsQuery()
+
     return (
-    <div>
-        <h1>Sidebar</h1>
-    </div>    
-    )        
+        <aside className="w-[348px] bg-gray-700 p-6 border-l border-gray-50">
+
+            <span className="font-bold text-2xl pb-6 mb-6 border-b border-gray-50 flex">
+                Cronograma de Aulas
+            </span>
+
+            <div className="flex flex-col gap-8">
+                {data?.lessons.map(lesson => {
+                    return (
+                        
+                            <Lesson
+                                key= {lesson.id}
+                                title={lesson.title}
+                                slug={lesson.slug}
+                                availableAt={new Date(lesson.availableAt)}
+                                type={lesson.lessonType}
+                            />
+
+                            
+                    )
+                })}
+
+            </div>
+
+        </aside>
+    )
 }
